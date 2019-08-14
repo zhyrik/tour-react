@@ -13,7 +13,7 @@ import TourList from './components/TourLIst'
  */
 function App() {
   return (
-    <div className="App">
+    <div className="App" data-test="app">
       <Navbar />
       <TourList />
     </div>

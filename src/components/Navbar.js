@@ -10,7 +10,7 @@ import logo from '../logo.png'
  */
 function Navbar() {
   return (
-    <nav className="navbar">
+    <nav className="navbar" data-test="navbar">
       <img src={logo} alt="logo" />
       <ul className="nav-links">
 

@@ -20,10 +20,14 @@ function Tour({ tour, removeTour }) {
   }
 
   return (
-    <article className="tour">
+    <article className="tour" data-test="tour">
       <div className="img-container">
         <img src={img} alt="city" width="200" className="img"/>
-        <span className="close-btn" onClick={() => removeTour(id)}>
+        <span
+          className="close-btn"
+          onClick={() => removeTour(id)}
+          data-test="button-close"
+        >
           <FaWindowClose />
         </span>
       </div>

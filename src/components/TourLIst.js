@@ -24,7 +24,7 @@ export default function TourLIst() {
   }
 
   return (
-    <section className="tour-lists">
+    <section className="tour-lists" data-test="tour-list">
       {tours.map(tour => {
         return (
           <Tour

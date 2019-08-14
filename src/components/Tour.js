@@ -36,7 +36,11 @@ function Tour({ tour, removeTour }) {
         <h3 className="tour-h3">{city}</h3>
         <h4 className="tour-h4">{name}</h4>
         <h5 className="tour-h5">info
-          <span className="tour-h5-span" onClick={() => handleInfo()}>
+          <span
+            className="tour-h5-span"
+            onClick={() => handleInfo()}
+            data-test="button-info"
+          >
             <FaCaretSquareDown />
           </span>
         </h5>

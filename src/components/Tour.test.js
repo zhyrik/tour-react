@@ -21,8 +21,10 @@ describe('', () => {
   
   let wrapper
   let mockFunk
+  let handleInfo
   beforeEach(() => {
     mockFunk = jest.fn()
+    handleInfo = jest.fn()
     const tour = {
       id: 1,
       city: "new york",
@@ -47,6 +49,13 @@ describe('', () => {
     const button = findByTestAttr(wrapper, 'button-close')
     button.simulate('click')
     const callback = mockFunk.mock.calls.length
+    expect(callback).toBe(1)
+  })
+
+  test('should emit callback on click event (info button)', () => {
+    const button = findByTestAttr(wrapper, 'button-info')
+    button.simulate('click', handleInfo()) // !!!!!!sSIMULATE BUTTON
+    const callback = handleInfo.mock.calls.length
     expect(callback).toBe(1)
   })
 
